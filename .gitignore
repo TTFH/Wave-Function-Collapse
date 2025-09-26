@@ -1,0 +1,7 @@
+.vscode/
+obj/
+output/
+
+*.zip
+wfc
+wfc.exe

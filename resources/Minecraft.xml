@@ -1,0 +1,84 @@
+<set>
+	<tiles>
+		<tile name="air"/>
+		<tile name="bedrock" weight="0.5"/>
+		<tile name="coal" weight="0.4"/>
+		<tile name="cobblestone"/>
+		<tile name="diamond" weight="0.1"/>
+		<tile name="dirt"/>
+		<tile name="door_bottom"/>
+		<tile name="door_top"/>
+		<tile name="gold" weight="0.2"/>
+		<tile name="grass"/>
+		<tile name="iron" weight="0.3"/>
+		<tile name="oak_planks" weight="0.5"/>
+	</tiles>
+	<neighbors>
+		<tile name="door_top">
+			<neighbor name="door_bottom" down="true"/>
+			<neighbor name="oak_planks" up="true" right="true" left="true"/>
+		</tile>
+		<tile name="door_bottom">
+			<neighbor name="grass" down="true"/>
+			<neighbor name="door_top" up="true"/>
+			<neighbor name="oak_planks" right="true" left="true"/>
+		</tile>
+		<tile name="oak_planks">
+			<neighbor name="grass" down="true"/>
+			<neighbor name="air" up="true" right="true" left="true"/>
+			<neighbor name="oak_planks" up="true" down="true" right="true" left="true"/>
+			<neighbor name="door_bottom" right="true" left="true"/>
+			<neighbor name="door_top" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="gold">
+			<neighbor name="cobblestone" up="true" down="true" right="true" left="true"/>
+			<neighbor name="gold" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="iron">
+			<neighbor name="cobblestone" up="true" down="true" right="true" left="true"/>
+			<neighbor name="iron" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="coal">
+			<neighbor name="dirt" up="true"/>
+			<neighbor name="cobblestone" down="true" right="true" left="true"/>
+			<neighbor name="coal" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="diamond">
+			<neighbor name="bedrock" down="true"/>
+			<neighbor name="cobblestone" up="true" right="true" left="true"/>
+			<neighbor name="diamond" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="bedrock">
+			<neighbor name="diamond" up="true"/>
+			<neighbor name="cobblestone" up="true" right="true" left="true"/>
+			<neighbor name="bedrock" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="cobblestone">
+			<neighbor name="dirt" up="true" right="true" left="true"/>
+			<neighbor name="bedrock" down="true" right="true" left="true"/>
+			<neighbor name="coal" up="true" right="true" left="true"/>
+			<neighbor name="iron" up="true" down="true" right="true" left="true"/>
+			<neighbor name="gold" up="true" down="true" right="true" left="true"/>
+			<neighbor name="diamond" down="true" right="true" left="true"/>
+			<neighbor name="cobblestone" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="dirt">
+			<neighbor name="grass" up="true"/>
+			<neighbor name="coal" down="true"/>
+			<neighbor name="cobblestone" down="true" right="true" left="true"/>
+			<neighbor name="dirt" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="grass">
+			<neighbor name="air" up="true"/>
+			<neighbor name="dirt" down="true"/>
+			<neighbor name="oak_planks" up="true"/>
+			<neighbor name="door_bottom" up="true"/>
+			<neighbor name="grass" right="true" left="true"/>
+		</tile>
+		<tile name="air">
+			<neighbor name="grass" down="true"/>
+			<neighbor name="oak_planks" down="true" right="true" left="true"/>
+			<neighbor name="air" up="true" down="true" right="true" left="true"/>
+		</tile>
+	</neighbors>
+</set>

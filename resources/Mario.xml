@@ -1,0 +1,184 @@
+<set>
+	<tiles>
+		<tile name="air"/>
+		<tile name="block" weight="0.25"/>
+		<tile name="brick" weight="0.25"/>
+		<tile name="cloud00"/>
+		<tile name="cloud01"/>
+		<tile name="cloud02"/>
+		<tile name="cloud10"/>
+		<tile name="cloud11"/>
+		<tile name="cloud12"/>
+		<tile name="grass0"/>
+		<tile name="grass1"/>
+		<tile name="grass2"/>
+		<tile name="ground" weight="0.1"/>
+		<tile name="mountain00"/>
+		<tile name="mountain01"/>
+		<tile name="mountain02"/>
+		<tile name="mountain03"/>
+		<tile name="mountain04"/>
+		<tile name="mountain11"/>
+		<tile name="mountain12"/>
+		<tile name="mountain13"/>
+		<tile name="mountain22"/>
+	</tiles>
+	<neighbors>
+		<tile name="ground">
+			<neighbor name="air" up="true"/>
+			<neighbor name="grass0" up="true"/>
+			<neighbor name="grass1" up="true"/>
+			<neighbor name="grass2" up="true"/>
+			<neighbor name="ground" up="true" down="true" right="true" left="true"/>
+			<neighbor name="mountain00" up="true"/>
+			<neighbor name="mountain01" up="true"/>
+			<neighbor name="mountain02" up="true"/>
+			<neighbor name="mountain03" up="true"/>
+			<neighbor name="mountain04" up="true"/>
+			<neighbor name="mountain11" up="true"/>
+			<neighbor name="mountain12" up="true"/>
+			<neighbor name="mountain13" up="true"/>
+		</tile>
+		<tile name="mountain00">
+			<neighbor name="mountain01" right="true"/>
+			<neighbor name="air" up="true" left="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain01">
+			<neighbor name="mountain00" left="true"/>
+			<neighbor name="mountain02" right="true"/>
+			<neighbor name="mountain11" up="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain02">
+			<neighbor name="mountain01" left="true"/>
+			<neighbor name="mountain03" right="true"/>
+			<neighbor name="mountain12" up="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain03">
+			<neighbor name="mountain02" left="true"/>
+			<neighbor name="mountain04" right="true"/>
+			<neighbor name="mountain13" up="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain04">
+			<neighbor name="mountain03" left="true"/>
+			<neighbor name="air" up="true" right="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain11">
+			<neighbor name="air" up="true" left="true"/>
+			<neighbor name="mountain12" right="true"/>
+			<neighbor name="mountain01" down="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain12">
+			<neighbor name="mountain11" left="true"/>
+			<neighbor name="mountain13" right="true"/>
+			<neighbor name="mountain02" down="true"/>
+			<neighbor name="mountain22" up="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain13">
+			<neighbor name="air" up="true" right="true"/>
+			<neighbor name="mountain12" left="true"/>
+			<neighbor name="mountain03" down="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="mountain22">
+			<neighbor name="mountain12" down="true"/>
+			<neighbor name="air" up="true" right="true" left="true"/>
+		</tile>
+		<tile name="ground">
+			<neighbor name="mountain00" up="true"/>
+			<neighbor name="mountain01" up="true"/>
+			<neighbor name="mountain02" up="true"/>
+			<neighbor name="mountain03" up="true"/>
+			<neighbor name="mountain04" up="true"/>
+			<neighbor name="mountain11" up="true"/>
+			<neighbor name="mountain12" up="true"/>
+			<neighbor name="mountain13" up="true"/>
+		</tile>
+		<tile name="air">
+			<neighbor name="mountain22" down="true" right="true" left="true"/>
+			<neighbor name="mountain00" down="true" right="true"/>
+			<neighbor name="mountain04" down="true" left="true"/>
+			<neighbor name="mountain11" down="true" right="true"/>
+			<neighbor name="mountain13" down="true" left="true"/>
+			<neighbor name="ground" down="true"/>
+			<neighbor name="grass0" down="true" right="true"/>
+			<neighbor name="grass1" down="true"/>
+			<neighbor name="grass2" down="true" left="true"/>
+			<neighbor name="cloud00" up="true" right="true"/>
+			<neighbor name="cloud01" up="true"/>
+			<neighbor name="cloud02" up="true" left="true"/>
+			<neighbor name="cloud10" down="true" right="true"/>
+			<neighbor name="cloud11" down="true"/>
+			<neighbor name="cloud12" down="true" left="true"/>
+			<neighbor name="block" up="true" down="true" right="true" left="true"/>
+			<neighbor name="brick" up="true" down="true" right="true" left="true"/>
+			<neighbor name="air" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="block">
+			<neighbor name="brick" right="true" left="true"/>
+			<neighbor name="air" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="brick">
+			<neighbor name="block" right="true" left="true"/>
+			<neighbor name="brick" right="true" left="true"/>
+			<neighbor name="air" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="grass0">
+			<neighbor name="air" up="true" left="true"/>
+			<neighbor name="grass1" right="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="grass1">
+			<neighbor name="air" up="true"/>
+			<neighbor name="grass0" left="true"/>
+			<neighbor name="grass2" right="true"/>
+			<neighbor name="grass1" right="true" left="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="grass2">
+			<neighbor name="air" up="true" right="true"/>
+			<neighbor name="grass1" left="true"/>
+			<neighbor name="ground" down="true"/>
+		</tile>
+		<tile name="cloud00">
+			<neighbor name="air" down="true" left="true"/>
+			<neighbor name="cloud01" right="true"/>
+			<neighbor name="cloud10" up="true"/>
+		</tile>
+		<tile name="cloud01">
+			<neighbor name="air" down="true"/>
+			<neighbor name="cloud00" left="true"/>
+			<neighbor name="cloud01" right="true" left="true"/>
+			<neighbor name="cloud02" right="true"/>
+			<neighbor name="cloud11" up="true"/>
+		</tile>
+		<tile name="cloud02">
+			<neighbor name="air" down="true" right="true"/>
+			<neighbor name="cloud01" left="true"/>
+			<neighbor name="cloud12" up="true"/>
+		</tile>
+		<tile name="cloud10">
+			<neighbor name="air" up="true" left="true"/>
+			<neighbor name="cloud11" right="true"/>
+			<neighbor name="cloud00" down="true"/>
+		</tile>
+		<tile name="cloud11">
+			<neighbor name="air" up="true"/>
+			<neighbor name="cloud10" left="true"/>
+			<neighbor name="cloud11" right="true" left="true"/>
+			<neighbor name="cloud12" right="true"/>
+			<neighbor name="cloud01" down="true"/>
+		</tile>
+		<tile name="cloud12">
+			<neighbor name="air" up="true" right="true"/>
+			<neighbor name="cloud11" left="true"/>
+			<neighbor name="cloud02" down="true"/>
+		</tile>
+	</neighbors>
+</set>
