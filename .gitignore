@@ -1,7 +1,9 @@
 .vscode/
-obj/
 output/
+obj/
 
 *.zip
 wfc
 wfc.exe
+tictactoe
+tictactoe.exe

@@ -17,7 +17,7 @@ OBJS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(notdir $(SRCS)))
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -37,7 +37,10 @@ debug: $(TARGET)
 release: CXXFLAGS += $(RELEASEFLAGS)
 release: $(TARGET)
 
-clean:
-	rm -rf $(OBJ_DIR)/*.o $(TARGET)
+tictactoe: tictactoe.cpp tictactoe.h
+	$(CXX) $(CXXFLAGS) ${RELEASEFLAGS} $< -o $@
 
-.PHONY: all debug release clean
+clean:
+	rm -rf $(OBJ_DIR)/*.o $(TARGET) tictactoe
+
+.PHONY: all debug release clean tictactoe
