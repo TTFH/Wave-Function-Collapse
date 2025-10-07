@@ -280,14 +280,18 @@ void ReadImagemosaic(XMLElement* elem) {
 	XMLElement* tile_elem = neighbors_elem->FirstChildElement("tile");
 	while (tile_elem != nullptr) {
 		string first_tile_name = tile_elem->Attribute("name");
-		if (tile_indices.find(first_tile_name) == tile_indices.end())
-			throw runtime_error("Unknown tile name: " + first_tile_name);
+		if (tile_indices.find(first_tile_name) == tile_indices.end()) {
+			tile_elem = tile_elem->NextSiblingElement("tile");
+			continue;
+		}
 		uint32_t first_tile_index = tile_indices[first_tile_name];
 		XMLElement* neighbor_elem = tile_elem->FirstChildElement("neighbor");
 		while (neighbor_elem != nullptr) {
 			string second_tile_name = neighbor_elem->Attribute("name");
-			if (tile_indices.find(second_tile_name) == tile_indices.end())
-				throw runtime_error("Unknown neighbor name: " + second_tile_name);
+			if (tile_indices.find(second_tile_name) == tile_indices.end()) {
+				neighbor_elem = neighbor_elem->NextSiblingElement("neighbor");
+				continue;
+			}
 			uint32_t second_tile_index = tile_indices[second_tile_name];
 			neighbors(0, first_tile_index, second_tile_index) = neighbor_elem->BoolAttribute("up");
 			neighbors(1, first_tile_index, second_tile_index) = neighbor_elem->BoolAttribute("left");

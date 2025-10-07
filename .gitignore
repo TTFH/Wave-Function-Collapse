@@ -3,7 +3,7 @@ output/
 obj/
 
 *.zip
-wfc
-wfc.exe
-tictactoe
-tictactoe.exe
+/wfc
+/wfc.exe
+/tictactoe
+/tictactoe.exe

@@ -1,0 +1,50 @@
+<set>
+	<tiles>
+		<tile name="empty"/>
+		<tile name="x"/>
+		<tile name="o"/>
+		<tile name="xo"/>
+	</tiles>
+	<neighbors>
+		<tile name="empty">
+			<neighbor name="empty" up="true" down="true" right="true" left="true"/>
+			<neighbor name="x" up="true" down="true" right="true" left="true"/>
+			<neighbor name="o" up="true" down="true" right="true" left="true"/>
+			<neighbor name="xo" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="x">
+			<neighbor name="empty" up="true" down="true" right="true" left="true"/>
+			<neighbor name="x" up="true" down="true" right="true" left="true"/>
+			<neighbor name="o" up="true" down="true" right="true" left="true"/>
+			<neighbor name="xo" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="o">
+			<neighbor name="empty" up="true" down="true" right="true" left="true"/>
+			<neighbor name="x" up="true" down="true" right="true" left="true"/>
+			<neighbor name="o" up="true" down="true" right="true" left="true"/>
+			<neighbor name="xo" up="true" down="true" right="true" left="true"/>
+		</tile>
+		<tile name="xo">
+			<neighbor name="empty" up="true" down="true" right="true" left="true"/>
+			<neighbor name="x" up="true" down="true" right="true" left="true"/>
+			<neighbor name="o" up="true" down="true" right="true" left="true"/>
+			<neighbor name="xo" up="true" down="true" right="true" left="true"/>
+		</tile>
+	</neighbors>
+	<subsets>
+		<subset name="Full">
+			<tile name="x"/>
+			<tile name="o"/>
+		</subset>
+		<subset name="Ongoing">
+			<tile name="x"/>
+			<tile name="o"/>
+			<tile name="empty"/>
+		</subset>
+		<subset name="Quantum">
+			<tile name="x"/>
+			<tile name="o"/>
+			<tile name="xo"/>
+		</subset>
+	</subsets>
+</set>

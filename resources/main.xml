@@ -4,5 +4,8 @@
 	<simpletiled name="Summer" width="40" height="23" screenshots="1"/>
 	<imagemosaic name="Minecraft" width="24" height="14" screenshots="1"/>
 	<imagemosaic name="Mario" width="120" height="68" screenshots="1"/>
+	<imagemosaic name="TicTacToe" size="3" subset="Full" screenshots="1"/>
+	<imagemosaic name="TicTacToe" size="3" subset="Ongoing" screenshots="1"/>
+	<imagemosaic name="TicTacToe" size="3" subset="Quantum" screenshots="1"/>
 	<voxelmosaic name="Teardown" width="3" height="4" depth="5" screenshots="1"/>
 </samples>
