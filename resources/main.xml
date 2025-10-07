@@ -1,6 +1,7 @@
 <samples>
 	<overlapping name="Skyline2" N="3" symmetry="2" ground="True" width="64" height="48" screenshots="1"/>
 	<simpletiled name="Circuit" width="138" height="78" screenshots="1"/>
+	<simpletiled name="Summer" width="40" height="23" screenshots="1"/>
 	<imagemosaic name="Minecraft" width="24" height="14" screenshots="1"/>
 	<imagemosaic name="Mario" width="120" height="68" screenshots="1"/>
 	<voxelmosaic name="Teardown" width="3" height="4" depth="5" screenshots="1"/>

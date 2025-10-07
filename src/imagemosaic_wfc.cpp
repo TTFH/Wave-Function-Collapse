@@ -58,8 +58,8 @@ ImagemosaicWFC::ImagemosaicWFC(vec2 size, const vector<ImageWeight>& tiles, cons
 
 void ImagemosaicWFC::setTile(vec2 index, uint32_t pattern) {
 	for (uint32_t p = 0; p < patterns.size(); p++)
-		if (p != pattern)
-			wfc.collapse(index, pattern);
+		if (pattern != p)
+			wfc.collapse(index, p);
 }
 
 optional<Image> ImagemosaicWFC::execute(int seed) {

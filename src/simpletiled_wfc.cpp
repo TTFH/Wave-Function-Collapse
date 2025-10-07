@@ -127,8 +127,8 @@ void SimpletiledWFC::setTile(vec2 index, uint32_t pattern, uint32_t orientation)
 		throw out_of_range("Tile index or orientation out of range");
 	uint32_t pattern_index = pattern_indices[pattern][orientation];
 	for (uint32_t p = 0; p < patterns.size(); p++)
-		if (p != pattern_index)
-			wfc.collapse(index, pattern);
+		if (pattern_index != p)
+			wfc.collapse(index, p);
 }
 
 optional<Image> SimpletiledWFC::execute(int seed) {
@@ -138,3 +138,24 @@ optional<Image> SimpletiledWFC::execute(int seed) {
 		return toImage(result.value());
 	return nullopt;
 }
+
+// TODO: Add save / load wfc state
+/*
+if (name == "Summer") {
+	for (uint32_t i = 0; i < height; i++) {
+		wfc.setTile(vec2(i, 0), tile_indices["water_a"], 0);
+		wfc.setTile(vec2(i, width - 1), tile_indices["water_a"], 0);
+	}
+	for (uint32_t j = 0; j < width; j++) {
+		wfc.setTile(vec2(0, j), tile_indices["water_a"], 0);
+		wfc.setTile(vec2(height - 1, j), tile_indices["water_a"], 0);
+	}
+	wfc.setTile(vec2(height / 2, width / 2), tile_indices["grass"], 0);
+}
+wfc.save();
+
+::execute() {
+	wfc = WFC(saved_state);
+	wfc.execute();
+}
+*/

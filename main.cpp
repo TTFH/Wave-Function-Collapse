@@ -269,7 +269,7 @@ void ReadImagemosaic(XMLElement* elem) {
 	unordered_map<string, ImageWeight> tiles_map = ReadImageWeight(root_elem, "resources/" + name, subset);
 	for (unordered_map<string, ImageWeight>::const_iterator it = tiles_map.begin(); it != tiles_map.end(); it++) {
 		tile_indices.insert({it->first, index});
-		printf("[INFO] %d: %s\n", index, it->first.c_str());
+		//printf("[INFO] %d: %s\n", index, it->first.c_str());
 		tiles.push_back(it->second);
 		index++;
 	}
@@ -324,7 +324,8 @@ void ReadConfigFile(const string& config_path) {
 	if (document.LoadFile(config_path.c_str()) != XML_SUCCESS)
 		throw runtime_error(config_path + " not found");
 	XMLElement* root_elem = document.FirstChildElement("samples");
-	XMLElement* elem = root_elem->FirstChildElement("simpletiled");
+	XMLElement* elem;
+	elem = root_elem->FirstChildElement("simpletiled");
 	while (elem != nullptr) {
 		ReadSimpletiled(elem);
 		elem = elem->NextSiblingElement("simpletiled");
