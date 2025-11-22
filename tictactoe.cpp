@@ -85,9 +85,9 @@ static bool equals(Tile a, Tile b, Tile c) {
 void Board::print() const {
 	printf("\n");
 	printf(" %c | %c | %c", cells[6].getChar(), cells[7].getChar(), cells[8].getChar());
-	printf("\n---|---|---\n");
+	printf("\n---+---+---\n");
 	printf(" %c | %c | %c", cells[3].getChar(), cells[4].getChar(), cells[5].getChar());
-	printf("\n---|---|---\n");
+	printf("\n---+---+---\n");
 	printf(" %c | %c | %c", cells[0].getChar(), cells[1].getChar(), cells[2].getChar());
 	printf("\n\n");
 }
